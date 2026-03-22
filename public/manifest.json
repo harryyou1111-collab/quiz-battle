@@ -1,0 +1,22 @@
+{
+  "name": "Quiz Battle ⚡ 퀴즈 배틀",
+  "short_name": "Quiz Battle",
+  "description": "친구들과 퀴즈 대결! Challenge your friends!",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1B0A3C",
+  "theme_color": "#1B0A3C",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
