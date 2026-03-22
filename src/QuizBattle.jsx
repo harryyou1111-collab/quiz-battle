@@ -1960,7 +1960,7 @@ export default function QuizBattle(){
             <div style={z.cntRow}><span style={z.cntL}>{t.questionCount}</span><div style={z.cntC}><button style={z.cntBtn} onClick={()=>setQCount(Math.max(5,qCount-5))}>−</button><span style={z.cntV}>{qCount}</span><button style={z.cntBtn} onClick={()=>setQCount(Math.min(30,qCount+5))}>+</button></div></div>
             <div style={{display:"flex",gap:10,justifyContent:"center",marginTop:10}}>
               <button style={z.navB} onClick={()=>setScreen("settings")}>←</button>
-              <button style={z.goBtn} onClick={startGame}>{t.startGame} ⚡</button>
+              <button style={{padding:"14px 30px",borderRadius:16,border:"none",background:"linear-gradient(135deg,#4ECDC4,#A855F7)",color:"#fff",fontSize:18,fontWeight:800,cursor:"pointer",fontFamily:"inherit",boxShadow:"0 8px 30px rgba(78,205,196,0.4)",WebkitTapHighlightColor:"transparent",touchAction:"manipulation"}} onClick={()=>startGame()}>{t.startGame} ⚡</button>
             </div>
           </div>
         )}
@@ -2033,7 +2033,7 @@ const z={
   sumR:{display:"flex",justifyContent:"space-between"},
   sumL:{fontSize:11,color:"rgba(255,255,255,0.4)",fontWeight:700},
   sumV:{fontSize:13,color:"#FFE66D",fontWeight:800},
-  goBtn:{padding:"13px 26px",borderRadius:16,border:"none",background:"linear-gradient(135deg,#4ECDC4,#44B09E,#A855F7)",backgroundSize:"200% 200%",color:"#fff",fontSize:18,fontWeight:800,cursor:"pointer",fontFamily:"inherit",animation:"glow 2s ease-in-out infinite",boxShadow:"0 8px 30px rgba(78,205,196,0.4)",transition:"transform 0.2s"},
+  goBtn:{padding:"13px 26px",borderRadius:16,border:"none",background:"linear-gradient(135deg,#4ECDC4,#44B09E,#A855F7)",backgroundSize:"200% 200%",color:"#fff",fontSize:18,fontWeight:800,cursor:"pointer",fontFamily:"inherit",boxShadow:"0 8px 30px rgba(78,205,196,0.4)",transition:"transform 0.2s",position:"relative",zIndex:5},
 
   // Split screen
   splitWrap:{display:"flex",flexDirection:"column",height:"100vh",color:"#fff",background:"linear-gradient(180deg,#1B0A3C,#2D1B69,#11998E)"},
@@ -2086,8 +2086,8 @@ const z={
   resLobby:{flex:1,padding:"13px",borderRadius:16,border:"2px solid rgba(255,255,255,0.15)",background:"rgba(255,255,255,0.06)",backdropFilter:"blur(10px)",color:"#fff",fontSize:13,fontWeight:800,cursor:"pointer",fontFamily:"inherit",transition:"all 0.2s"},
   exitBtn:{position:"absolute",left:0,top:0,width:36,height:36,borderRadius:12,border:"2px solid rgba(255,255,255,0.2)",background:"rgba(255,255,255,0.1)",backdropFilter:"blur(10px)",color:"#fff",fontSize:16,cursor:"pointer",fontFamily:"inherit",display:"flex",alignItems:"center",justifyContent:"center",zIndex:10},
   exitBtnTeam:{position:"absolute",left:10,background:"rgba(255,255,255,0.2)",border:"none",color:"#fff",borderRadius:8,width:28,height:28,fontSize:14,cursor:"pointer",fontFamily:"inherit",display:"flex",alignItems:"center",justifyContent:"center",zIndex:10},
-  gearBtn:{position:"fixed",top:10,right:10,background:"rgba(255,255,255,0.15)",backdropFilter:"blur(10px)",border:"2px solid rgba(255,255,255,0.25)",color:"#fff",borderRadius:12,width:38,height:38,fontSize:16,cursor:"pointer",zIndex:100,display:"flex",alignItems:"center",justifyContent:"center",transition:"transform 0.2s"},
-  gearBtnAbs:{position:"fixed",top:10,right:10,background:"rgba(255,255,255,0.2)",backdropFilter:"blur(10px)",border:"none",color:"#fff",borderRadius:10,width:36,height:36,fontSize:15,cursor:"pointer",zIndex:100,display:"flex",alignItems:"center",justifyContent:"center"},
+  gearBtn:{position:"fixed",top:10,left:10,background:"rgba(255,255,255,0.15)",backdropFilter:"blur(10px)",border:"2px solid rgba(255,255,255,0.25)",color:"#fff",borderRadius:12,width:38,height:38,fontSize:16,cursor:"pointer",zIndex:100,display:"flex",alignItems:"center",justifyContent:"center",transition:"transform 0.2s"},
+  gearBtnAbs:{position:"fixed",top:10,left:10,background:"rgba(255,255,255,0.2)",backdropFilter:"blur(10px)",border:"none",color:"#fff",borderRadius:10,width:36,height:36,fontSize:15,cursor:"pointer",zIndex:100,display:"flex",alignItems:"center",justifyContent:"center"},
   settingsOverlay:{position:"fixed",top:0,left:0,right:0,bottom:0,background:"rgba(0,0,0,0.6)",backdropFilter:"blur(5px)",zIndex:200,display:"flex",alignItems:"center",justifyContent:"center",padding:20,animation:"popIn 0.25s cubic-bezier(0.34,1.56,0.64,1)"},
   settingsCard:{background:"linear-gradient(135deg,#2D1B69,#1B0A3C)",borderRadius:24,padding:"20px",width:"100%",maxWidth:340,border:"2px solid rgba(255,255,255,0.15)",boxShadow:"0 20px 60px rgba(0,0,0,0.5)",display:"flex",flexDirection:"column",gap:16},
   settingsHeader:{display:"flex",alignItems:"center",gap:8,justifyContent:"center",position:"relative"},
